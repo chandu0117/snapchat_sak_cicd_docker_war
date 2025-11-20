@@ -78,8 +78,8 @@ pipeline {
             steps {
                 echo "Cleaning up local Docker images..."
                 sh '''
-                    sudo docker rmi sakit333/snapchat-sak-cicd-docker:latest
-                    sudo docker rmi snapchat-sak-cicd-docker
+                    sudo docker rmi chandu1701/snapchat-sak-cicd-docker:latest || true
+                    sudo docker rmi snapchat-sak-cicd-docker:latest || true
                 '''
             }
             post {
