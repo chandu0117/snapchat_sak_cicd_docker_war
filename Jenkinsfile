@@ -49,7 +49,7 @@ pipeline {
         stage('Docker Tag the Image') {
             steps {
                 echo "Tagging the Docker image..."
-                sh 'sudo docker tag snapchat-sak-cicd-docker sakit333/snapchat-sak-cicd-docker:latest'
+                sh 'sudo docker tag snapchat-sak-cicd-docker chandu1701/snapchat-sak-cicd-docker:latest'
             }
             post {
                 success {
@@ -63,7 +63,7 @@ pipeline {
         stage('Docker Push the Image') {
             steps {
                 echo "Pushing the Docker image to DockerHub..."
-                sh 'sudo docker push sakit333/snapchat-sak-cicd-docker:latest'
+                sh 'sudo docker push chandu1701/snapchat-sak-cicd-docker:latest'
             }
             post {
                 success {
